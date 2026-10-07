@@ -1,0 +1,29 @@
+name: knusos_with_smartphone_frontend
+description: "knusos with smartphone frontend"
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_dotenv: ^6.0.1
+  flutter_hooks: ^0.21.3+1
+  hooks_riverpod: ^3.4.3
+  riverpod: ^3.4.3
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Pretendard
+      fonts:
+        - asset: assets/fonts/PretendardVariable.ttf
+  assets:
+    - assets/images/
+    - .env
