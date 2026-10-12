@@ -1,4 +1,4 @@
-import 'package:knusos_with_smartphone_frontend/infra/widgets/feature/index.dart';
+import 'package:knusos_with_smartphone_frontend/widgets/feature/index.dart';
 
 class FeatureViewState {
   List<FeatureWidget> features;

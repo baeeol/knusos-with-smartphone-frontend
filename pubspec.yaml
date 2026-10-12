@@ -12,6 +12,7 @@ dependencies:
   flutter_dotenv: ^6.0.1
   flutter_hooks: ^0.21.3+1
   hooks_riverpod: ^3.4.3
+  material_symbols_icons: ^4.2960.0
   riverpod: ^3.4.3
 dev_dependencies:
   flutter_test:

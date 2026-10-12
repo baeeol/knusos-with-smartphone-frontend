@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:knusos_with_smartphone_frontend/infra/constants/palette.constant.dart';
+import 'package:knusos_with_smartphone_frontend/constants/palette.constant.dart';
 
 class FeatureTimeline extends StatelessWidget {
   final Widget child;
@@ -8,7 +8,7 @@ class FeatureTimeline extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(height: 14, child: child);
+    return SizedBox(height: 12, child: child);
   }
 }
 

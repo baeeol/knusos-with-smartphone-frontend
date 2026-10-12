@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:knusos_with_smartphone_frontend/app/feature/store/index.dart';
-import 'package:knusos_with_smartphone_frontend/app/feature/widgets/calendar/calendar_feature.dart';
-import 'package:knusos_with_smartphone_frontend/app/feature/widgets/resident/resident_feature.dart';
-import 'package:knusos_with_smartphone_frontend/infra/widgets/feature/index.dart';
+import 'package:knusos_with_smartphone_frontend/riverpod/feature/index.dart';
+import 'package:knusos_with_smartphone_frontend/widgets/feature/index.dart';
 
 class FeatureView extends ConsumerStatefulWidget {
-  const FeatureView({super.key});
+  final List<
+    FeatureWidget Function({
+      Key? key,
+      required FeatureWidgetProps featureWidgetProps,
+    })
+  >
+  features;
+
+  const FeatureView({super.key, required this.features});
 
   @override
   ConsumerState<FeatureView> createState() => _FeatureViewState();
@@ -18,12 +24,7 @@ class _FeatureViewState extends ConsumerState<FeatureView> {
     super.initState();
     ref
         .read(featureViewProvider.notifier)
-        .registerFeatures(
-          createFeatureWidgetList(ref, [
-            ResidentFeature.new,
-            CalendarFeature.new,
-          ]),
-        );
+        .registerFeatures(createFeatureWidgetList(ref, widget.features));
   }
 
   @override

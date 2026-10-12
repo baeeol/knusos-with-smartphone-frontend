@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:knusos_with_smartphone_frontend/app/feature/store/feature_view_state.dart';
-import 'package:knusos_with_smartphone_frontend/infra/widgets/feature/index.dart';
+import 'package:knusos_with_smartphone_frontend/riverpod/feature/feature_view_state.dart';
+import 'package:knusos_with_smartphone_frontend/widgets/feature/index.dart';
 
 class FeatureViewNotifier extends Notifier<FeatureViewState> {
   @override
